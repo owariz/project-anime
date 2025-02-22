@@ -2,19 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Kanit', sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.loader {
+    border: 8px solid #f3f3f3; /* สีพื้นหลัง */
+    border-top: 8px solid #3498db; /* สีกระพริบ */
+    border-radius: 50%;
+    width: 60px; /* ขนาด */
+    height: 60px; /* ขนาด */
+    animation: spin 1s linear infinite; /* สร้างการเคลื่อนไหว */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
